@@ -1,0 +1,30 @@
+﻿<Window x:Class="mozirendszer.MovieListWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Filmek listája" Height="450" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="10" Grid.Row="0">
+            <Button x:Name="CreateMovieButton" Content="Új film" Click="CreateMovieButton_Click" Margin="0,0,10,0" Visibility="Collapsed" />
+            <Button x:Name="SearchMovieButton" Content="Keresés" Click="SearchMovieButton_Click" />
+        </StackPanel>
+        <DataGrid x:Name="MoviesDataGrid" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" />
+                <DataGridTextColumn Header="Cím" Binding="{Binding Title}" />
+                <DataGridTextColumn Header="Leírás" Binding="{Binding Description}" />
+                <DataGridTextColumn Header="Megjelenés Dátuma" Binding="{Binding ReleaseDate}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Orientation="Horizontal" Margin="10" Grid.Row="2">
+            <Button Content="Film részletei" Click="ShowMovieDetailsButton_Click" Margin="0,0,10,0" />
+            <Button Content="profil részletei" Click="ShowMovieProfilButton_Click" Margin="0,0,10,0" />
+        </StackPanel>
+    </Grid>
+</Window>

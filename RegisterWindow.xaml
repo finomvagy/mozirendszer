@@ -1,0 +1,16 @@
+<Window x:Class="mozirendszer.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Regisztráció" Height="300" Width="400">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Felhasználónév:"/>
+            <TextBox Name="UsernameBox"/>
+            <TextBlock Text="Email:" Margin="0,10,0,0"/>
+            <TextBox Name="EmailBox"/>
+            <TextBlock Text="Jelszó:" Margin="0,10,0,0"/>
+            <PasswordBox Name="PasswordBox"/>
+            <Button Content="Regisztráció" Margin="0,10,0,0" Click="RegisterButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

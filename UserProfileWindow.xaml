@@ -1,0 +1,13 @@
+<Window x:Class="mozirendszer.UserProfileWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Profil" Height="200" Width="300">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Felhasználónév:"/>
+            <Label Name="UsernameLabel"/>
+            <TextBlock Text="Email:"/>
+            <Label Name="EmailLabel"/>
+        </StackPanel>
+    </Grid>
+</Window>

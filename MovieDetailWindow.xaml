@@ -1,0 +1,22 @@
+﻿<Window x:Class="mozirendszer.MovieDetailWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Film részletei" Height="300" Width="400">
+    <Grid>
+        <StackPanel Margin="10">
+            <Label Content="Cím:" FontWeight="Bold" />
+            <Label x:Name="TitleLabel" Margin="0,0,0,10" />
+
+            <Label Content="Leírás:" FontWeight="Bold" />
+            <TextBlock x:Name="DescriptionTextBlock" Margin="0,0,0,10" TextWrapping="Wrap" />
+
+            <Label Content="Megjelenés dátuma:" FontWeight="Bold" />
+            <Label x:Name="ReleaseDateLabel" Margin="0,0,0,10" />
+
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="EditMovieButton" Content="Szerkesztés" Click="EditMovieButton_Click" Margin="0,0,10,0" Visibility="Collapsed" />
+                <Button x:Name="DeleteMovieButton" Content="Törlés" Click="DeleteMovieButton_Click" Visibility="Collapsed" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
