@@ -8,12 +8,11 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-
         <StackPanel Orientation="Horizontal" Margin="10" Grid.Row="0">
-            <Button x:Name="CreateMovieButton" Content="Új film" Click="CreateMovieButton_Click" Margin="0,0,10,0" Visibility="Collapsed" />
-            <Button x:Name="SearchMovieButton" Content="Keresés" Click="SearchMovieButton_Click" />
+            <Button x:Name="CreateMovieButton" Content="Új film" Click="CreateMovieButton_Click" Margin="10" />
+            <Button Height="20" x:Name="SearchMovieButton" Content="Keresés" Click="SearchMovieButton_Click" />
         </StackPanel>
-        <DataGrid x:Name="MoviesDataGrid" AutoGenerateColumns="False" IsReadOnly="True">
+        <DataGrid Grid.Row="1" x:Name="MoviesDataGrid" AutoGenerateColumns="False" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding Id}" />
                 <DataGridTextColumn Header="Cím" Binding="{Binding Title}" />
